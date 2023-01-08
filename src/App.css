@@ -17,7 +17,11 @@
   font-size: 1em;
   font-weight: bold;
 }
-
+.App-header img {
+  width: 1rem;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(309deg)
+    brightness(101%) contrast(103%);
+}
 .App-title {
   font-size: 1.5em;
 }
@@ -27,6 +31,32 @@
   font-size: large;
 }
 
+/* TouristInfoCards */
+.tac {
+  text-align: center;
+}
+.tourist-card-container {
+  width: 100%;
+}
+.tourist-card-container button {
+  cursor: pointer;
+  border: 1px solid black;
+}
+.tourist-card-box {
+  border: 1px solid black;
+  width: 25rem;
+  padding: 2rem 0.5rem;
+}
+/* SearchResults.js */
+table th {
+  text-transform: capitalize;
+}
+/* NewBookings.js */
+.new-booking-btn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -48,10 +78,14 @@ tr {
 }
 
 .footer {
-  padding-top: 20px;
   text-align: center;
+  background-color: #252525;
+  color: #fff;
 }
 
 .card {
-  width: 18rem;
+  width: 100%;
+}
+.widthTooLong {
+  overflow-x: auto;
 }
