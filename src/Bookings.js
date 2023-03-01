@@ -38,7 +38,6 @@ const Bookings = () => {
       }
     };
     fetchData();
-    return () => fetchData();
   }, []);
 
   const newBookings = obj => {

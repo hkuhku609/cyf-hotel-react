@@ -23,7 +23,6 @@ const SearchResults = ({ results, getOrderedData }) => {
       }
     };
     fetchData();
-    return () => fetchData();
   }, [storedId]);
 
   const [order, setOrder] = useState("ASC");

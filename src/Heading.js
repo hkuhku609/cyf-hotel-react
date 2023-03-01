@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "./assets/hotel.svg";
+import { formErrorContext } from "./App";
 
 const Heading = () => {
+  const { isFormError, setIsFormError } = useContext(formErrorContext);
   return (
-    <header className="App-header">
-      CYF Hotel <img src={logo} />
-    </header>
+    <>
+      <header className="App-header">
+        CYF Hotel <img src={logo} />
+        {isFormError && (
+          <div
+            className="alert alert-danger alert-dismissible formError"
+            role="alert"
+          >
+            <div>The fields do not contain correct information.</div>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+              onClick={() => setIsFormError(false)}
+            />
+          </div>
+        )}
+      </header>
+    </>
   );
 };
 
